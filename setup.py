@@ -10,9 +10,9 @@ with open(path.join(here, 'README.md'), encoding='utf-8') as f:
 
     setup(
         name='social_auth_ragtag_id',
-        version='1.0.0',
+        version='1.0.1',
         description='An OAuth2 backend for social-auth-core',
-        long_description='long_description',
+        long_description=long_description,
         long_description_content_type='text/markdown',
         url='https://github.com/RagtagOpen/python-social-auth-ragtag-id',
         author='Ragtag',
