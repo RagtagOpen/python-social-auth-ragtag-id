@@ -34,8 +34,14 @@ These can be obtained from a member of Ragtag staff.
 
 Assuming the default URL setup from social_core, you can now login at `/login/ragtag/`.
 
-Optionally you can define `SOCIAL_AUTH_RAGTAG_SCOPES` to limit which data your app needs access to. Available scopes can be seen at https://id.ragtag.org/api/scopes/. For example:
+Optionally you may define `SOCIAL_AUTH_RAGTAG_SCOPES` to limit which data your app needs access to. Available scopes can be seen at https://id.ragtag.org/api/scopes/. For example:
 
 ```python
 SOCIAL_AUTH_RAGTAG_SCOPES = ['identity', 'email']
+```
+
+And you may define `SOCIAL_AUTH_RAGTAG_APPROVAL_PROMPT` as `force` to force the approval screen to appear every time the user signs in.
+
+```python
+SOCIAL_AUTH_RAGTAG_APPROVAL_PROMPT = 'force'
 ```

@@ -28,3 +28,10 @@ class RagtagOAuth2(BaseOAuth2):
                 'Authorization': 'Bearer {}'.format(access_token)
             }
         )
+
+    def auth_params(self, state=None):
+        params = super(RagtagOAuth2, self).auth_params(state=state)
+        approval_prompt = self.setting('APPROVAL_PROMPT', 'auto')
+        if not approval_prompt == 'auto':
+            params['approval_prompt'] = self.setting('APPROVAL_PROMPT', '')
+        return params
